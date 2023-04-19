@@ -1,0 +1,1 @@
+Hola este repositorio es oara subir el taller 2 de Front-end intermedio -  Nixson
