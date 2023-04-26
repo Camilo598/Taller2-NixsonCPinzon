@@ -5,8 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
 </head>
 <body>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Registro de estudiantes</h1>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ExampleModal">Agregar Estudiante</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registro de Estudiante</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="tipoIdentificacion">Tipo de Identificacion</label>
+                            <select class="form-select" id="tipoIdentificacion">
+                                <option value="cedula">Cedula</option>
+                                <option value="tarjetaIdentificacion">TarjetaIdentificacion</option>
+                                <option value="pasaporte">Pasaporte</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="numeroIdentificacion">Numero de Identificacion</label>
+                            <input type="text" class="form.control" id="numeroIdentificacion">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombres">Nombres:</label>
+                            <input type="text" class="form.control" id="nombred">
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" class="form.control" id="apellidos">
+                        </div>
+                        <div class="form-group">
+                            <label for="celular">Celular:</label>
+                            <input type="text" class="form.control" id="celular">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electronico</label>
+                            <input type="text" class="form.control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="linkedin">Usuario de LinkedIn:</label>
+                            <input type="text" class="form.control" id="linkedin">
+                        </div>
+                        <div class="form-group">
+                            <label for="github">Usuario de GitHub</label>
+                            <input type="text" class="form.control" id="github">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" onclick="guardarEstudiante()">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.js"></script>
     <script type="module" src="../dist/index.js"></script>
 </body>
 </html>
